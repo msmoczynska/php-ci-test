@@ -34,7 +34,6 @@ RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
 
 RUN curl -sS https://getcomposer.org/installer | php
-RUN php composer.phar install --no-scripts
 
 RUN eval $(ssh-agent -s)
 RUN mkdir -p /root/.ssh
