@@ -26,7 +26,14 @@ libpcre3-dev \
 libtidy-dev \
 git \
 openssh-client \
-nano
+nano \
+nodejs \
+npm
+
+RUN npm install yarn -g
+
+RUN yarn install
+RUN yarn add @symfony/webpack-encore --dev
 
 RUN docker-php-ext-install zip
 
@@ -37,3 +44,7 @@ RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/bin/composer
 
 RUN mkdir -p /root/.ssh
+
+RUN cd app
+RUN yarn install \
+yarn build
