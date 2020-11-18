@@ -26,7 +26,11 @@ libpcre3-dev \
 libtidy-dev \
 git \
 openssh-client \
-nano
+nano \
+nodejs \
+npm
+
+RUN npm install yarn -g
 
 RUN docker-php-ext-install zip
 
