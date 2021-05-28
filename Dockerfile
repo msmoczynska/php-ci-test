@@ -28,7 +28,10 @@ git \
 openssh-client \
 nano \
 nodejs \
-npm
+npm \
+libfreetype6-dev libjpeg62-turbo-dev libpng-dev && \
+docker-php-ext-configure gd && \
+docker-php-ext-install gd
 
 RUN npm install yarn -g
 
