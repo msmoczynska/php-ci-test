@@ -37,7 +37,7 @@ RUN npm install yarn -g
 
 RUN docker-php-ext-install zip
 
-RUN pecl install xdebug
+RUN pecl install xdebug-2.9.7
 RUN docker-php-ext-enable xdebug
 
 RUN curl -sS https://getcomposer.org/installer | php
